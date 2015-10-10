@@ -21,7 +21,8 @@
     font-weight: 300;
 }
 .post-preview a:hover *, a:focus * {
-    color: #FC0;
+    color: #F0E7D5;
+    opacity: .5;
 }
 .post-preview .post-head .post-meta {
     margin-top: 0;

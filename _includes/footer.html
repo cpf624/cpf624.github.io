@@ -42,7 +42,23 @@
             </div>
         </div>
     </div>
+
+    <div href="#page-header" class="cd-top"><i class="fa fa-arrow-circle-o-up"></i></div>
 </footer>
 
-<script src="//cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
-<script src="//cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $(document).scroll(function(){
+        if ($(document).scrollTop() > 0) {
+            $('.cd-top').show();
+        } else {
+            $('.cd-top').hide();
+        }
+    });
+    $('.cd-top').click(function(){
+        $('html, body').stop().animate({ scrollTop: 0 }, '500', 'swing');
+    });
+});
+</script>

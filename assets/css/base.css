@@ -10,12 +10,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 a {
     color: #999;
+    opacity: 1;
+}
+a * {
+    color: #999;
 }
 a:hover, a:focus {
-    color: #FC0;
-}
-a:hover *, a:focus * {
-    color: #FC0;
+    color: #999;
+    opacity: .5;
 }
 a img:hover, a img:focus {
     cursor: zoom-in;
@@ -148,4 +150,17 @@ img::-moz-selection {
     #page-footer {
         font-size: 12px;
     }
+}
+#page-footer .cd-top {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    font-size: 3em;
+    opacity: .5;
+}
+#page-footer .cd-top:hover,
+#page-footer .cd-top:focus {
+    opacity: 1;
 }
