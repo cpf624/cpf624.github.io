@@ -1,0 +1,48 @@
+<!-- Footer -->
+<footer id="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-1">
+                <span class="author text-muted">
+                    <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+                </span>
+                <span>
+                    <a target="__blank" href="{{ "/feed.xml" | prepend: site.baseurl }}">
+                        <i class="fa fa-rss"></i>
+                    </a>
+                    {% if site:accounts.email %}
+                        <a href="mailto:{{ site.accounts.email }}">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    {% endif %}
+                    {% if site:accounts.weibo %}
+                        <a target="__blank" href="http://weibo.com/{{ site.accounts.weibo }}">
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                    {% endif %}
+                    {% if site.accounts.github %}
+                        <a target="__blank" href="https://github.com/{{ site.accounts.github }}">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    {% endif %}
+                    {% if site.accounts.twitter %}
+                        <a href="https://twitter.com/{{ site.accounts.twitter }}">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    {% endif %}
+                    {% if site.accounts.facebook %}
+                        <a href="https://www.facebook.com/{{ site.accounts.facebook }}">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    {% endif %}
+                </span>
+                <span class="copyright text-muted">
+                    &copy; {{ site.time | date: '%Y' }}
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="//cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js"></script>

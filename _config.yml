@@ -1,0 +1,24 @@
+baseurl: ""
+markdown: redcarpet
+highlighter: pygments
+timezone: Asia/Shanghai
+encoding: UTF-8
+
+accounts:
+    email: "cpf624@126.com"
+    weibo: "jhat"
+    github: "cpf624"
+
+defaults:
+-
+    scope:
+        path: "blog"
+    values:
+        layout: "blog_post"
+
+paginate: 5
+excerpt_separator: "\n\n\n"
+author: "Jhat"
+title: "Jhat's Blog"
+description: "jhat.pw Jhat"
+header_img: "assets/images/home-bg.jpg"

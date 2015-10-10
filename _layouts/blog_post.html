@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+
+    {% include meta.html %}
+    {% include head.html %}
+
+    <link rel="stylesheet" href="{{ "/assets/css/syntax.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/assets/css/blog.css" | prepend: site.baseurl }}">
+</head>
+<body>
+
+<!-- Page Header -->
+<header id="page-header" style="background-image: url('{{ site.baseurl }}/{% if page.header_img %}{{ page.header_img }}{% else %}{{ site.header_img }}{% endif %}');">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-1">
+                <div class="page-heading">
+                    <h1 class="heading-title">{% if page.title %}{{ page.title }}{% endif %}</h1>
+                    {% if page.subtitle %}
+                        <h2 class="heading-subtitle">{{ page.subtitle }}</h2>
+                    {% endif %}
+                </div>
+                <p class="heading-meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% include nav.html %}
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-1">
+            <div id="page-content">
+                <div class="post-content">
+                    {{ content }}
+                </div>
+                <div class="post-pager">
+                    <ul>
+                        {% if page.next %}
+                            <li class="previous">
+                                <a href="{{ site.baseurl }}/{{ page.next.url }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">
+                                    <i class="fa fa-chevron-left"></i>
+                                    {{ page.next.title | truncate: 10 }}
+                                </a>
+                            </li>
+                        {% endif %}
+                        {% if page.previous %}
+                            <li class="next">
+                                <a href="{{ site.baseurl }}/{{ page.previous.url }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">
+                                    {{ page.previous.title | truncate: 10 }}
+                                    <i class="fa fa-chevron-right"></i>
+                                </a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include footer.html %}
+
+<script src="{{ "/assets/js/blog.js " | prepend: site.baseurl }}"></script>
+</body>
+</html>

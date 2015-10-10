@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{% site.title %}}</title>
+
+    {% include meta.html %}
+    {% include head.html %}
+
+    <link rel="stylesheet" href="{{ "/assets/css/syntax.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/assets/css/blog.css" | prepend: site.baseurl }}">
+</head>
+<body>
+
+{% include header.html %}
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-1">
+            <div id="post-content">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include footer.html %}
+
+<script src="{{ "/assets/js/blog.js " | prepend: site.baseurl }}"></script>
+</body>
+</html>

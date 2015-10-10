@@ -1,0 +1,67 @@
+.post-preview {
+    padding: 20px;
+    margin: 10px 20px;
+    background-color: #444;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    font-size: 16px;
+}
+.post-preview .post-title {
+    color: #F0E7D5;
+    font-size: 30px;
+    font-weight: 600;
+}
+.post-preview .post-subtitle {
+    color: #F0E7D5;
+    font-size: 24px;
+    font-weight: 300;
+}
+.post-preview a:hover *, a:focus * {
+    color: #FC0;
+}
+.post-preview .post-head .post-meta {
+    margin-top: 0;
+    color: #808080;
+    text-align: right;
+    font-family: 'Lora', 'Times New Roman', serif;
+    font-size: 14px;
+    font-weight: 300;
+    font-style: italic;
+}
+.post-preview .post-read-more a {
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+.post-pager {
+    margin: 20px 0px;
+    height: 30px;
+}
+.post-pager ul {
+    padding: 0px;
+}
+.post-pager ul li {
+    list-style: none;
+    margin: 0px;
+}
+.post-pager .previous {
+    float: left;
+}
+.post-pager .next {
+    float: right;
+}
+
+.pagination li a,
+.pagination li.disabled a,
+.pagination li.active a {
+    background-color: #444;
+    border-color: #767676;
+    color: #F0E7D5;
+}
+.pagination li.active a {
+    background-color: #767676;
+}
