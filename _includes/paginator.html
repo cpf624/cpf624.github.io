@@ -3,7 +3,7 @@
         <ul class="pagination pagination-lg">
             {% if paginator.page > 1 %}
                 <li>
-                    <a aria-label="Previous" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">&laquo;</a>
+                    <a aria-label="Previous" href="{{ site.baseurl | append: paginator.previous_page_path }}">&laquo;</a>
                 </li>
             {% endif %}
 
@@ -54,7 +54,7 @@
 
             {% if paginator.page < paginator.total_pages %}
                 <li>
-                    <a aria-label="Next" href="{{ paginator.next_page_path | prepend: site.baseurl }}">&raquo;</a>
+                    <a aria-label="Next" href="{{ site.baseurl | append: paginator.next_page_path }}">&raquo;</a>
                 </li>
             {% endif %}
         </ul>

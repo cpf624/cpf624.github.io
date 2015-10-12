@@ -42,7 +42,7 @@
                     <ul>
                         {% if page.next %}
                             <li class="previous">
-                                <a href="{{ page.next.url | prepend: site.baseurl }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">
+                                <a href="{{ site.baseurl | append: page.next.url }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">
                                     <i class="fa fa-chevron-left"></i>
                                     {{ page.next.title | truncate: 50 }}
                                 </a>
@@ -50,7 +50,7 @@
                         {% endif %}
                         {% if page.previous %}
                             <li class="next">
-                                <a href="{{ page.previous.url | prepend: site.baseurl }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">
+                                <a href="{{ site.baseurl | append: page.previous.url }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">
                                     {{ page.previous.title | truncate: 50 }}
                                     <i class="fa fa-chevron-right"></i>
                                 </a>

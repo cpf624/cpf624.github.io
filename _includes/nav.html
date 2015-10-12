@@ -19,9 +19,10 @@
                     <a href="{{ site.baseurl }}/">Home</a>
                 </li>
                 {% for page in site.pages %}
-                    {% if page.title %}
+                    {% assign page_name = page.url | remove: '.html' %}
+                    {% if page.url != page_name and page.title %}
                         <li>
-                            <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                            <a href="{{ site.baseurl | append: page.url }}">{{ page.title }}</a>
                         </li>
                     {% endif %}
                 {% endfor %}
