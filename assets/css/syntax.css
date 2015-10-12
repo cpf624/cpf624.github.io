@@ -1,6 +1,7 @@
 .highlight {
-    color: white;
+    color: #F0E7D5;
     background-color: #333;
+    margin: 0 1em;
 }
 .highlight pre {
     display: block;
@@ -8,11 +9,13 @@
     padding 1em;
     margin: 1em 0px;
     border: none;
+    color: #F0E7D5;
     background-color: transparent;
     font-family: monospace;
     font-size: 0.8em;
 }
 .highlight pre code {
+    color: #F0E7D5;
     white-space: pre;
     word-wrap: normal;
 }

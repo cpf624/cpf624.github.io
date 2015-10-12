@@ -1,5 +1,5 @@
 <!-- Page Header -->
-<header id="page-header" style="background-image: url('{{ site.baseurl }}/{% if page.header_img %}{{ page.header_img }}{% else %}{{ site.header_img }}{% endif %}');">
+<header id="page-header" style="background-image: url('{{ site.baseurl }}{% if page.header_img %}{{ page.header_img }}{% else %}{{ site.header_img }}{% endif %}');">
 </header>
 
 {% include nav.html %}

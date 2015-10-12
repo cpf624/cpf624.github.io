@@ -1,6 +1,8 @@
+#page-content,
 .post-preview {
     padding: 20px;
     margin: 10px 20px;
+    margin-top: 0px;
     background-color: #444;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -38,8 +40,14 @@
     text-decoration: underline;
 }
 
+.post-excerpt > p,
+.post-content > p {
+    text-indent: 2em;
+    white-space: pre-wrap;
+}
+
 .post-pager {
-    margin: 20px 0px;
+    padding: 20px 0px;
     height: 30px;
 }
 .post-pager ul {
@@ -64,5 +72,10 @@
     color: #F0E7D5;
 }
 .pagination li.active a {
+    background-color: #767676;
+}
+.pagination li.active a:hover,
+.pagination li.active a:focus {
+    border-color: #767676;
     background-color: #767676;
 }

@@ -1,12 +1,14 @@
-<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<link rel="canonical" href="{{ site.baseurl }}/{{ page.url | replace:'index.html', '' }}">
 
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/basscss/7.0.0/basscss.min.css">
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/fontawesome/4.4.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="{{ "/assets/css/base.css" | prepend: site.baseurl }}">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/base.css">
 
 <link ref="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
 <link ref="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+<link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/assets/images/favicon.ico">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>

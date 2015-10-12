@@ -6,13 +6,13 @@
     {% include meta.html %}
     {% include head.html %}
 
-    <link rel="stylesheet" href="{{ "/assets/css/syntax.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/assets/css/blog.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/syntax.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/blog.css">
 </head>
 <body>
 
 <!-- Page Header -->
-<header id="page-header" style="background-image: url('{{ site.baseurl }}/{% if page.header_img %}{{ page.header_img }}{% else %}{{ site.header_img }}{% endif %}');">
+<header id="page-header" style="background-image: url('{{ site.baseurl }}{% if page.header_img %}{{ page.header_img }}{% else %}{{ site.header_img }}{% endif %}');">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-1">
@@ -42,16 +42,16 @@
                     <ul>
                         {% if page.next %}
                             <li class="previous">
-                                <a href="{{ site.baseurl }}/{{ page.next.url }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">
+                                <a href="{{ page.next.url | prepend: site.baseurl }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">
                                     <i class="fa fa-chevron-left"></i>
-                                    {{ page.next.title | truncate: 10 }}
+                                    {{ page.next.title | truncate: 50 }}
                                 </a>
                             </li>
                         {% endif %}
                         {% if page.previous %}
                             <li class="next">
-                                <a href="{{ site.baseurl }}/{{ page.previous.url }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">
-                                    {{ page.previous.title | truncate: 10 }}
+                                <a href="{{ page.previous.url | prepend: site.baseurl }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">
+                                    {{ page.previous.title | truncate: 50 }}
                                     <i class="fa fa-chevron-right"></i>
                                 </a>
                             </li>
@@ -65,6 +65,6 @@
 
 {% include footer.html %}
 
-<script src="{{ "/assets/js/blog.js " | prepend: site.baseurl }}"></script>
+<script src="{{ site.baseurl }}/assets/js/blog.js"></script>
 </body>
 </html>

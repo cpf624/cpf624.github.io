@@ -7,7 +7,7 @@
                     <a href="{{ site.baseurl }}/">{{ site.title }}</a>
                 </span>
                 <span>
-                    <a target="__blank" href="{{ "/feed.xml" | prepend: site.baseurl }}">
+                    <a target="__blank" href="{{ site.baseurl }}/feed.xml">
                         <i class="fa fa-rss"></i>
                     </a>
                     {% if site:accounts.email %}
@@ -51,14 +51,14 @@
 <script type="text/javascript">
 $(document).ready(function(){
     $(document).scroll(function(){
-        if ($(document).scrollTop() > 0) {
+        if ($(document).scrollTop() > 100) {
             $('.cd-top').show();
         } else {
             $('.cd-top').hide();
         }
     });
     $('.cd-top').click(function(){
-        $('html, body').stop().animate({ scrollTop: 0 }, '500', 'swing');
+        $('html, body').stop().animate({ scrollTop: 0 }, '600', 'swing');
     });
 });
 </script>

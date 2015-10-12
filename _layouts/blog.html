@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{% site.title %}}</title>
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
 
     {% include meta.html %}
     {% include head.html %}
 
-    <link rel="stylesheet" href="{{ "/assets/css/syntax.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/assets/css/blog.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/syntax.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/blog.css">
 </head>
 <body>
 
@@ -26,6 +26,6 @@
 
 {% include footer.html %}
 
-<script src="{{ "/assets/js/blog.js " | prepend: site.baseurl }}"></script>
+<script src="{{ site.baseurl }}/assets/js/blog.js"></script>
 </body>
 </html>
