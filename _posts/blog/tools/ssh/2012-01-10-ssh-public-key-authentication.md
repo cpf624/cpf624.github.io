@@ -1,6 +1,6 @@
 ---
 title: SSH密钥认证
-category: TOOLS
+category: 编程工具
 tags: [Linux, SSH]
 ---
 

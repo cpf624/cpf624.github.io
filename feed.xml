@@ -5,40 +5,40 @@
     xmlns:atom="http://www.w3.org/2005/Atom"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
-	<channel>
-		<title>
+    <channel>
+        <title>
             {%if page.title %}
                 {{ page.title | xml_escape }}
             {% else %}
                 {{ site.title | xml_escape }}
             {% endif %}
         </title>
-		<description>
+        <description>
             {% if page.description %}
                 {{ page.description | xml_escape }}
             {% else %}
                 {{ site.description | xml_escape}}
             {% endif %}
         </description>
-		<link>{{ site.baseurl }}</link>
-		<atom:link href="{{ site.baseurl }}/feed.xml" rel="self" type="application/rss+xml" />
+        <link>{{ site.baseurl }}</link>
+        <atom:link href="{{ site.baseurl }}/feed.xml" rel="self" type="application/rss+xml" />
         <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
         <language>zh-CN</language>
         <sy:updatePeriod>hourly</sy:updatePeriod>
         <sy:updateFrequency>1</sy:updateFrequency>
-		{% for post in site.posts limit: 20 %}
-			<item>
-				<title>{{ post.title | xml_escape }}</title>
-				{% if post.author %}
-					<dc:creator>{{ post.author | xml_escape }}</dc:creator>
+        {% for post in site.posts limit: 20 %}
+            <item>
+                <title>{{ post.title | xml_escape }}</title>
+                {% if post.author %}
+                    <dc:creator>{{ post.author | xml_escape }}</dc:creator>
                 {% else %}
-					<dc:creator>{{ site.author | xml_escape }}</dc:creator>
-				{% endif %}
-				<description>{{ post.content | xml_escape }}</description>
-				<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-				<link>{{ site.baseurl | append: post.url }}</link>
-				<guid isPermaLink="true">{{ site.baseurl | append: post.url }}</guid>
-			</item>
-		{% endfor %}
-	</channel>
+                    <dc:creator>{{ site.author | xml_escape }}</dc:creator>
+                {% endif %}
+                <description>{{ post.content | xml_escape }}</description>
+                <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+                <link>{{ site.baseurl | append: post.url }}</link>
+                <guid isPermaLink="true">{{ site.baseurl | append: post.url }}</guid>
+            </item>
+        {% endfor %}
+    </channel>
 </rss>

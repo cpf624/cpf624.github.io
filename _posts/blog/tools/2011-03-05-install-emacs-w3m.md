@@ -1,6 +1,6 @@
 ---
 title: 安装emacs-w3m
-category: TOOLS
+category: 编程工具
 tags: [Linux, Emacs]
 ---
 
