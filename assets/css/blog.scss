@@ -48,6 +48,10 @@
     text-indent: 2em;
     white-space: pre-wrap;
 }
+.post-excerpt img,
+.post-content img {
+    display: block;
+}
 
 .post-pager {
     padding: 20px 0px;
