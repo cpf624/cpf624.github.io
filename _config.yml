@@ -1,4 +1,4 @@
-baseurl: ""
+homeurl: "http://jhat.pw"
 markdown: redcarpet
 highlighter: pygments
 timezone: Asia/Shanghai

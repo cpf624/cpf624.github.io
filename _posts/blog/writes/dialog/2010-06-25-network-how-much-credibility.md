@@ -14,7 +14,7 @@ tags: [有感而发]
 目前中国网民男女性别比例为54.2：45.8，女性网民占比略低于《中国统计年鉴2009》中女性人口的比例，2009年底男性网民的规模占比小幅上扬。
 
 <p align="center">
-    <img src="{{ site.baseurl }}/assets/images/blog/writes/dialog/network-how-much-credibility/internet-users-gender-structure-contrast.jpg" alt="网民性别结构对比" />
+    <img src="{{ site.homeurl }}/assets/images/blog/writes/dialog/network-how-much-credibility/internet-users-gender-structure-contrast.jpg" alt="网民性别结构对比" />
     图 1 网民性别结构对比
 </p>
 
@@ -25,7 +25,7 @@ tags: [有感而发]
 低龄网民占比也在上升，10岁以下网民群体增至1.1%，2009年，“校校通”工程实施接近尾声，大部分初级学校都建立起较为完善的网络教育课程。同时，教育部、财政部、工业和信息化部、国务院新闻办发起了净化校园网络环境的措施，为各中小学校联网的计算机终端免费提供绿色上网过滤软件，这为低龄群体健康上网起到了保驾护航的作用。
 
 <p align="center">
-    <img src="{{ site.baseurl }}/assets/images/blog/writes/dialog/network-how-much-credibility/internet-users-age-structure-contrast.jpg" alt="网民年龄结构对比" />
+    <img src="{{ site.homeurl }}/assets/images/blog/writes/dialog/network-how-much-credibility/internet-users-age-structure-contrast.jpg" alt="网民年龄结构对比" />
     图 2 网民年龄结构对比
 </p>
 
@@ -34,14 +34,14 @@ tags: [有感而发]
 中国网民群体继续向低学历人群渗透。2009年，小学及以下网民群体增长超过整体网民增速，目前占到网民整体的8.8%，年增幅3.4个百分点。高中学历网民占比也略微提升，大专及以上学历网民占比继续降低，网民学历结构更为均衡。
 
 <p align="center">
-    <img src="{{ site.baseurl }}/assets/images/blog/writes/dialog/network-how-much-credibility/internet-users-education-structure-contrast.jpg" alt="网民学历结构对比" />
+    <img src="{{ site.homeurl }}/assets/images/blog/writes/dialog/network-how-much-credibility/internet-users-education-structure-contrast.jpg" alt="网民学历结构对比" />
     图 3 网民学历结构对比
 </p>
 
 ### 4. 职业结构
 
 <p align="center">
-    <img src="{{ site.baseurl }}/assets/images/blog/writes/dialog/network-how-much-credibility/internet-users-profession-structure-contrast.jpg" alt="网民职业结构对比" />
+    <img src="{{ site.homeurl }}/assets/images/blog/writes/dialog/network-how-much-credibility/internet-users-profession-structure-contrast.jpg" alt="网民职业结构对比" />
     图 4 网民职业结构对比
 </p>
 
@@ -52,7 +52,7 @@ tags: [有感而发]
 网民中无收入群体比重继续上升，目前达到10%，这与无业人员越来越多地被吸纳到网民群体中有关。同时，月收入在2000元以上的网民群体占比也在增大，互联网消费的用户基础更为坚实。
 
 <p align="center">
-    <img src="{{ site.baseurl }}/assets/images/blog/writes/dialog/network-how-much-credibility/internet-users-income-structure-contrast.jpg" alt="网民收入结构对比" />
+    <img src="{{ site.homeurl }}/assets/images/blog/writes/dialog/network-how-much-credibility/internet-users-income-structure-contrast.jpg" alt="网民收入结构对比" />
     图 5 网民收入结构对比
 </p>
 

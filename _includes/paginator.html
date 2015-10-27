@@ -3,7 +3,7 @@
         <ul class="pagination pagination-lg">
             {% if paginator.page > 1 %}
                 <li>
-                    <a aria-label="Previous" href="{{ site.baseurl | append: paginator.previous_page_path }}">&laquo;</a>
+                    <a aria-label="Previous" href="{{ site.homeurl | append: paginator.previous_page_path }}">&laquo;</a>
                 </li>
             {% endif %}
 
@@ -18,18 +18,18 @@
                 {% assign page_number = page_start | divided_by: 10 | minus: 1 | times: 10 %}
                 {% if page_number > 0 %}
                     <li class="disabled"><a>...</a></li>
-                    <li><a href="{{ site.baseurl }}/page{{ page_number }}/">{{ page_number }}</a></li>
+                    <li><a href="{{ site.homeurl }}/page{{ page_number }}/">{{ page_number }}</a></li>
                 {% endif %}
 
                 {% if page_start > 1 %}
                     <li class="disabled"><a>...</a></li>
                 {% endif %}
                 {% for page_number in (page_start...page_end) %}
-                    <li><a href="{{ site.baseurl }}/{% if page_number != 1 %}page{{ page_number }}/{% endif %}">{{ page_number }}</a></li>
+                    <li><a href="{{ site.homeurl }}/{% if page_number != 1 %}page{{ page_number }}/{% endif %}">{{ page_number }}</a></li>
                 {% endfor %}
             {% endif %}
 
-            <li class="active"><a href="{{ site.baseurl }}/{% if paginator.page != 1 %}page{{ paginator.page }}/{% endif %}">{{ paginator.page }}</a></li>
+            <li class="active"><a href="{{ site.homeurl }}/{% if paginator.page != 1 %}page{{ paginator.page }}/{% endif %}">{{ paginator.page }}</a></li>
 
             {% assign page_start = paginator.page | plus: 1 %}
             {% assign page_end = paginator.page | plus: page_step %}
@@ -37,7 +37,7 @@
                 {% assign page_end = paginator.total_pages %}
             {% endif %}
             {% for page_number in (page_start...page_end) %}
-                <li><a href="{{ site.baseurl }}/page{{ page_number }}/">{{ page_number }}</a></li>
+                <li><a href="{{ site.homeurl }}/page{{ page_number }}/">{{ page_number }}</a></li>
             {% endfor %}
             {% assign page_number = page_end | divided_by: 10 | plus: 1 | times: 10 %}
             {% if page_number < paginator.total_pages %}
@@ -45,7 +45,7 @@
                 {% if page_diff > 1 %}
                     <li class="disabled"><a>...</a></li>
                 {% endif %}
-                <li><a href="{{ site.baseurl }}/page{{ page_number }}/">{{ page_number }}</a></li>
+                <li><a href="{{ site.homeurl }}/page{{ page_number }}/">{{ page_number }}</a></li>
                 {% assign page_end = page_number %}
             {% endif %}
             {% if page_end < paginator.total_pages %}
@@ -54,7 +54,7 @@
 
             {% if paginator.page < paginator.total_pages %}
                 <li>
-                    <a aria-label="Next" href="{{ site.baseurl | append: paginator.next_page_path }}">&raquo;</a>
+                    <a aria-label="Next" href="{{ site.homeurl | append: paginator.next_page_path }}">&raquo;</a>
                 </li>
             {% endif %}
         </ul>

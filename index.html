@@ -6,7 +6,7 @@ description: Jhat's Blog
 {% for post in paginator.posts %}
     <div class="post-preview">
         <div class="post-head">
-            <a href="{{ site.baseurl | append: post.url }}">
+            <a href="{{ site.homeurl | append: post.url }}">
                 <h2 class="post-title">{{ post.title }}</h2>
                 {% if post.subtitle %}
                     <h3 class="post-subtitle">{{ post.subtitle }}</h3>
@@ -21,7 +21,7 @@ description: Jhat's Blog
 
         {% if post.excerpt != post.content %}
             <div class="post-read-more">
-                <a href="{{ site.baseurl | append: post.url }}">Read More ...</a>
+                <a href="{{ site.homeurl | append: post.url }}">Read More ...</a>
             </div>
         {% endif %}
     </div>

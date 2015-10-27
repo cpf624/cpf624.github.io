@@ -50,23 +50,23 @@ tags: [Eclipse, Hibernate, J2EE, Java, MySQL, Spring, Struts2, Tomcat]
 
     在这里可以不使用MyEclipse自带的JDK，得`Add…`自己安装好的JDK ：
 
-    ![Add Installed JDK]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/add_installed_jdk.jpg)
+    ![Add Installed JDK]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/add_installed_jdk.jpg)
 
 2. Window -> Preferences -> MyEclipse -> Servers: Tomcat 6.x
 
     在这里配置Tomcat服务器，我们这里是选择`6.x` 。`Browse…`自己将Tomcat解压放的目录，再选择`Enable`将它启用，然后`Apply`应用一下就Ok了。
 
-    ![Enable Tomcat 6.x]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/enable_tomcat_6x.jpg)
+    ![Enable Tomcat 6.x]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/enable_tomcat_6x.jpg)
 
 3. Window -> Preferences: Tomcat 6.x -> JDK 选择前面我们配好的JDK版本。
 
-    ![Select JDK for Tomcat]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/select_jdk_for_tomcat.jpg)
+    ![Select JDK for Tomcat]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/select_jdk_for_tomcat.jpg)
 
 4. 现在我们来启动Tomcat服务器，打开内部的浏览器测试Tomcat有没有配置成功
 
     ***如下图所示：则表示Tomcat服务器配置成功。***
 
-    ![Test Tomcat Config]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/test_tomcat_config.jpg)
+    ![Test Tomcat Config]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/test_tomcat_config.jpg)
 
 5. Window -> Preferences -> Java -> Build Path: User Libraries
 
@@ -74,7 +74,7 @@ tags: [Eclipse, Hibernate, J2EE, Java, MySQL, Spring, Struts2, Tomcat]
 
     ***PS: 这一步可以到后面需要添加自己的jar包时，再做也可以的。***
 
-    ![Build Path User Libraries]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/build_path_user_libraries.jpg)
+    ![Build Path User Libraries]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/build_path_user_libraries.jpg)
 
 6. 右键项目 -> Build Path -> Add Liberies
 
@@ -82,11 +82,11 @@ tags: [Eclipse, Hibernate, J2EE, Java, MySQL, Spring, Struts2, Tomcat]
 
     ***PS: 这一步可以到后面需要添加自己的jar包时，再做也可以的。***
 
-    ![Build Path Add Libraries]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/build_path_add_libraries.jpg)
+    ![Build Path Add Libraries]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/build_path_add_libraries.jpg)
 
-    ![Add Library Select Type]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/add_library_select_type.jpg)
+    ![Add Library Select Type]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/add_library_select_type.jpg)
 
-    ![Add Library Select Libraries]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/add_library_select_libraries.jpg)
+    ![Add Library Select Libraries]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/add_library_select_libraries.jpg)
 
 3. 创建好Web项目
 ----------------
@@ -94,42 +94,42 @@ tags: [Eclipse, Hibernate, J2EE, Java, MySQL, Spring, Struts2, Tomcat]
 
 1. 选择项目名，右击 ->MyEclipse ->Add Spring Capabilities…
 
-    ![Add Spring Capabilities]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/add_spring_capablilities.jpg)
+    ![Add Spring Capabilities]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/add_spring_capablilities.jpg)
 
 2. 勾选好`Spring3.0`的五个核心Libraries，注意将它们Copy到`/WebRoot/WEB-INF/lib`目录下，再点击Next
 
-    ![Add Spring Capabilities Select Spring]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/add_spring_capablilities_select_spring.jpg)
+    ![Add Spring Capabilities Select Spring]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/add_spring_capablilities_select_spring.jpg)
 
-    ![Add Spring Capabilities Config Spring]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/add_spring_capablilities_config_spring.jpg)
+    ![Add Spring Capabilities Config Spring]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/add_spring_capablilities_config_spring.jpg)
 
 3. 完成后，项目中将会出现Spring添加的东西，有时候可能会出现不名的错误，现在暂时不需管它(推荐刷新项目) ，有些原因是因为Spring的Xml配置文件里引入的东西有冲突。
 
-    ![Finish and Refresh]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/finish_and_refresh.jpg)
+    ![Finish and Refresh]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/finish_and_refresh.jpg)
 
 4. 创建数据源，切换到MyEclipse Database Explorer窗口
 ----------------------------------------------------
 
-![MyEclipse Database Explorer]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/myeclipse_database_explorer.jpg)
+![MyEclipse Database Explorer]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/myeclipse_database_explorer.jpg)
 
 1. 在左边`DB Browser`的窗口里， 右击选择`New…`新建一个数据源，出如下图所示的窗口 ：
 
     根据自己项目所建的数据库来选择配置，引入连接驱动JARs包。
 
-    ![Config Database Driver]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/config_database_driver.jpg)
+    ![Config Database Driver]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/config_database_driver.jpg)
 
 2. 配好后，点击`Test Driver`来测试配置连接是否成功。
 
     下图所示则表示成功了， 再进行下一步操作。
 
-    ![Test Database Driver]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/test_database_driver.jpg)
+    ![Test Database Driver]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/test_database_driver.jpg)
 
 3. Schema Details 选择连接映射的数据库， 没必要将全部的数据库连接进来。
 
-    ![Selection Needed]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/selection_needed.jpg)
+    ![Selection Needed]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/selection_needed.jpg)
 
 4. 配置好以后，然后选择它将它`Open connection…`打开看一看，能否将数据连接过来：
 
-    ![Open Connection]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/open_connection.jpg)
+    ![Open Connection]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/open_connection.jpg)
 
 5. 再将窗口切换回来， 现在添加 Hibernate 3.3
 --------------------------------------------
@@ -137,12 +137,12 @@ tags: [Eclipse, Hibernate, J2EE, Java, MySQL, Spring, Struts2, Tomcat]
 
     这里可以选择支持`Annotations`注解方式来进行SSH的集成。注意将Library Copy到`/WebRoot/WEB-INF/lib`目录下
 
-    ![Add Hibernate Capabilities]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/add_hibernate_capabilities.jpg)
+    ![Add Hibernate Capabilities]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/add_hibernate_capabilities.jpg)
 
 2. 在对话框中选择Spring configuration file，表示我们希望将Hibernate托管给Spring进行管理，这是将Hibernate与Spring进行整合的基础。
 然后点击 Next
 
-    ![Hibernate Config Spring Config]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/hibernate_config_spring_config.jpg)
+    ![Hibernate Config Spring Config]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/hibernate_config_spring_config.jpg)
 
 3. 在出现的对话框中选择Existing Spring configuration file 。
 
@@ -152,7 +152,7 @@ tags: [Eclipse, Hibernate, J2EE, Java, MySQL, Spring, Struts2, Tomcat]
 
     然后点击Next ：
 
-    ![Hibernate Config Exists Spring]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/hibernate_config_exists_spring.jpg)
+    ![Hibernate Config Exists Spring]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/hibernate_config_exists_spring.jpg)
 
 4. 在出现的对话框中的Bean Id里面输入数据源在Spring中的Bean Id的名字，这里我们输入`dataSource`。
 
@@ -160,11 +160,11 @@ tags: [Eclipse, Hibernate, J2EE, Java, MySQL, Spring, Struts2, Tomcat]
 
     然后点击Next ：
 
-    ![Hibernate Config Select DB Driver]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/hibernate_config_select_db_driver.jpg)
+    ![Hibernate Config Select DB Driver]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/hibernate_config_select_db_driver.jpg)
 
 5. 在出现的对话框中取消 Create SessionFactory class 。点击 Finish 即可。
 
-    ![Hibernate Config Finish]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/hibernate_config_finish.jpg)
+    ![Hibernate Config Finish]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/hibernate_config_finish.jpg)
 
 6. 集成Struts
 -------------
@@ -202,33 +202,33 @@ tags: [Eclipse, Hibernate, J2EE, Java, MySQL, Spring, Struts2, Tomcat]
     到这里，我们整个项目的框架就算初步成形了，下面我们可以到MyEclipse Java Enterprise 视图下查看一下整个项目的结构，再进行后续操作。
     如下图所示：
 
-    ![MyEclipse Java Enterprise]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/myeclipse_java_enterprise.jpg)
+    ![MyEclipse Java Enterprise]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/myeclipse_java_enterprise.jpg)
 
 7. Hibernate Reverse Engineering反向生成Pojo类，自动生成映射关系
 ----------------------------------------------------------------
 1. 再进入到MyEclipse Database Explorer视图，全选中所有的表，右击选择`Hibernate Reverse Engineering…`操作，如下图所示：
 
-    ![Hibernate Reverse Engineering]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/hibernate_reverse_engineering.jpg)
+    ![Hibernate Reverse Engineering]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/hibernate_reverse_engineering.jpg)
 
 2. Java src folder: 选项`Browse…`到自己新建好的包下面，我这里是放到 Model(或者DTO) 层，如下图所示：
 
-    ![Select Java Source Folder]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/select_java_source_folder.jpg)
+    ![Select Java Source Folder]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/select_java_source_folder.jpg)
 
 3. 再选择*.hbm.xml和POJO映射，注意我们不需选择：`Create abstract class`，再Next:
 
-    ![Hibernate Mapping Config]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/hibernate_mapping_config.jpg)
+    ![Hibernate Mapping Config]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/hibernate_mapping_config.jpg)
 
 4. 下一步再选择`Id Generator`的生成策略，我们选`native`，再点Next，如下图所示 :
 
-    ![Hibernate Mapping Id Generator]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/hibernate_mapping_id_generator.jpg)
+    ![Hibernate Mapping Id Generator]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/hibernate_mapping_id_generator.jpg)
 
 5. 接下来，默认选项，直接点击Finish完成这项操作，如下图所示：
 
-    ![Hibernate Mapping Finish]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/hibernate_mapping_finish.jpg)
+    ![Hibernate Mapping Finish]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/hibernate_mapping_finish.jpg)
 
 6. 最后回到MyEclipse Java Enterprise视图，查看是否已成功生成映射文件，如下图所示 ：
 
-    ![Hibernate Config Verify]({{ site.baseurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/hibernate_config_verify.jpg)
+    ![Hibernate Config Verify]({{ site.homeurl }}/assets/images/blog/tools/ide/eclipse/myeclipse-integration-ssh/hibernate_config_verify.jpg)
 
     到这里我们就将SSH整合的所有操作都做好了，接下来就是进行编码工作，修改相应的XML配置文件，最后到完成项目，发布web项目，启动web服务器，运行测试项目。
 

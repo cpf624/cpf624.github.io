@@ -20,8 +20,8 @@
                 {{ site.description | xml_escape}}
             {% endif %}
         </description>
-        <link>{{ site.baseurl }}</link>
-        <atom:link href="{{ site.baseurl }}/feed.xml" rel="self" type="application/rss+xml" />
+        <link>{{ site.homeurl }}</link>
+        <atom:link href="{{ site.homeurl }}/feed.xml" rel="self" type="application/rss+xml" />
         <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
         <language>zh-CN</language>
         <sy:updatePeriod>hourly</sy:updatePeriod>
@@ -36,8 +36,8 @@
                 {% endif %}
                 <description>{{ post.content | xml_escape }}</description>
                 <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-                <link>{{ site.baseurl | append: post.url }}</link>
-                <guid isPermaLink="true">{{ site.baseurl | append: post.url }}</guid>
+                <link>{{ site.homeurl | append: post.url }}</link>
+                <guid isPermaLink="true">{{ site.homeurl | append: post.url }}</guid>
             </item>
         {% endfor %}
     </channel>
