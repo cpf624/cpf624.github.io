@@ -12,11 +12,7 @@ compress_html:
 sass:
     style: compressed
 
-accounts:
-    email: "cpf624@126.com"
-    weibo: "jhat"
-    github: "cpf624"
-    cnzz: "5898421"
+exclude: ['bin']
 
 defaults:
 -
@@ -32,3 +28,9 @@ author: "Jhat"
 title: "Jhat's Blog"
 description: "jhat.pw Jhat"
 header_img: "/assets/images/home-bg.jpg"
+
+accounts:
+    email: "cpf624@126.com"
+    weibo: "jhat"
+    github: "cpf624"
+    cnzz: "5898421"
