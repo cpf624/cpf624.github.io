@@ -82,11 +82,12 @@ def format_post(url):
 
 def postQZone(title, html):
     account, password = account_manager.getQZoneAccount()
+    qmail_account = account + '@qq.com'
     smtp = SMTP_SSL('smtp.qq.com', 465)
-    smtp.login(account, password)
+    smtp.login(qmail_account, password)
 
-    fromaddr = account
-    toaddrs = (account,)
+    fromaddr = qmail_account
+    toaddrs = (account + '@qzone.qq.com',)
 
     msg = MIMEMultipart('alternative')
     msg['Subject'] = Header(title, 'UTF-8')

@@ -60,7 +60,7 @@ def getAccount(account_key):
         return account, aes.decrypt(password).encode('UTF-8')
 
     from getpass import getpass
-    password = getpass(account + "'s password: ")
+    password = getpass(account_key + ' of ' +account + "'s password: ")
 
     config.set(password_section, account_key, aes.encrypt(password))
     with open(account_file, 'w') as fp:
