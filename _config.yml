@@ -29,6 +29,8 @@ title: "Jhat's Blog"
 description: "jhat.pw Jhat"
 header_img: "/assets/images/home-bg.jpg"
 
+nav_pages: ['photos', 'about']
+
 accounts:
     email: "cpf624@126.com"
     weibo: "jhat"

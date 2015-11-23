@@ -18,13 +18,15 @@
                 <li>
                     <a href="{{ site.homeurl }}/">Home</a>
                 </li>
-                {% for page in site.pages %}
-                    {% assign page_name = page.url | remove: '.html' %}
-                    {% if page.url != page_name and page.title %}
-                        <li>
-                            <a href="{{ site.homeurl | append: page.url }}">{{ page.title }}</a>
-                        </li>
-                    {% endif %}
+                {% for nav_page in site.nav_pages %}
+                    {% for page in site.html_pages %}
+                        {% assign page_name = page.url | remove_first: '/' | remove: '.html' %}
+                        {% if page.title and nav_page == page_name %}
+                            <li>
+                                <a href="{{ site.homeurl | append: page.url }}">{{ page.title }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
                 {% endfor %}
             </ul>
         </div>
