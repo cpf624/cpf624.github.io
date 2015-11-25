@@ -1,0 +1,28 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+
+    {% include meta.html %}
+    {% include head.html %}
+
+    <link rel="stylesheet" type="text/css" href="{{ site.homeurl }}/assets/css/gallery.css">
+
+</head>
+<body>
+
+{% include header.html %}
+
+<script type="text/javascript" src="{{ site.homeurl }}/assets/js/gallery.js"></script>
+
+<div id="gallery" class="gallery">
+    {{ content }}
+</div>
+
+{% include footer.html %}
+
+</body>
+</html>
