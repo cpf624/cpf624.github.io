@@ -16,20 +16,22 @@ function loadPhotos(n) {
         width = size[0];
         height = size[1];
 
-        gallery.createBox(width, height, function(box) {
+        waterfall.createBox(width, height, function(box) {
+            width = box.offsetWidth;
+            height = box.offsetHeight;
             var marginVertical = (box.offsetHeight - height) / 2;
-            box.innerHTML = '<div style="background: #' + color + '; width: ' + width + 'px; height: ' + height + 'px; margin: ' + marginVertical + 'px auto;" class="gallery-box-content"></div>';
+            box.innerHTML = '<div style="background: #' + color + '; width: ' + width + 'px; height: ' + height + 'px; margin: ' + marginVertical + 'px auto;" class="waterfall-box-content"></div>';
         });
     }
 }
 
 window.onload = function() {
-    gallery.init('gallery');
+    waterfall.init('waterfall');
     loadPhotos(5);
 };
 
 window.onresize = function() {
-    gallery.resort();
+    waterfall.resort();
 };
 
 window.onscroll = function() {

@@ -1,5 +1,5 @@
-var gallery = {};
-gallery.init = function(wrapId, meta) {
+var waterfall = {};
+waterfall.init = function(wrapId, meta) {
     this.wrap = document.getElementById(wrapId);
     if (this.wrap == undefined) {
         return null;
@@ -52,7 +52,7 @@ gallery.init = function(wrapId, meta) {
     return this;
 };
 
-gallery.preset = function() {
+waterfall.preset = function() {
     var offsetWidth = $(document).width();
     this.cols = offsetWidth / this.meta.box.width >> 0;
     if ((offsetWidth - (this.cols * this.meta.box.width)) < 50) {
@@ -66,22 +66,19 @@ gallery.preset = function() {
     this.maxY = 0;
 };
 
-gallery.resort = function() {
+waterfall.resort = function() {
     this.preset();
     this.sort(this.boxs);
 };
 
-gallery.createBox = function(width, height, callback) {
-    width += this.meta.box.space;
-    height += this.meta.box.space;
-
+waterfall.createBox = function(width, height, callback) {
     var box = document.createElement('div');
-    box.className = 'gallery-box';
+    box.className = 'waterfall-box';
 
     var nx = Math.ceil(width / this.meta.box.width);
     var ny = Math.ceil(height / this.meta.box.height);
-    width = nx * this.meta.box.width - this.meta.box.space;
-    height = ny * this.meta.box.height - this.meta.box.space;
+    width = nx * this.meta.box.width;
+    height = ny * this.meta.box.height;
     nx = (nx > this.cols) ? this.cols : nx;
 
     box.style.width = width + 'px';
@@ -99,7 +96,7 @@ gallery.createBox = function(width, height, callback) {
     callback(box);
 };
 
-gallery.sort = function(box) {
+waterfall.sort = function(box) {
     if (box instanceof Array) {
         for (var i = 0; i < box.length; i++) {
             this.sort(box[i]);
@@ -196,7 +193,7 @@ gallery.sort = function(box) {
     box.wrap.style.top = top + 'px';
 };
 
-gallery.newMarks = function() {
+waterfall.newMarks = function() {
     for (var i = 0; i < this.meta.mark.step; i++) {
         var r = new Array(this.cols);
         for (var j = 0; j < this.cols; j++) {
