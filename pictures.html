@@ -3,4 +3,49 @@ layout: gallery
 title: Pictures
 ---
 
-<img src="{{ site.homeurl | append: '/assets/images/pictures/rainy_days_road.jpg' }}" />
+
+<script>
+var gallery = new Gallery('gallery');
+gallery.createBox({
+    slides: [{
+        width: 1366,
+        height: 854,
+        url: '{{ site.homeurl | append: '/assets/images/pictures/rainy_days_road.jpg' }}'
+    }]
+});
+gallery.createBox({
+    slides: [{
+        width: 1600,
+        height: 1066,
+        url: '{{ site.homeurl | append: '/assets/images/pictures/setting_sun/setting_sun_1.jpg' }}'
+    }, {
+        width: 1600,
+        height: 1066,
+        url: '{{ site.homeurl | append: '/assets/images/pictures/setting_sun/setting_sun_2.jpg' }}'
+    }, {
+        width: 1600,
+        height: 1066,
+        url: '{{ site.homeurl | append: '/assets/images/pictures/setting_sun/setting_sun_3.jpg' }}'
+    }, {
+        width: 1600,
+        height: 1066,
+        url: '{{ site.homeurl | append: '/assets/images/pictures/setting_sun/setting_sun_4.jpg' }}'
+    }]
+});
+gallery.createBox({
+    slides: [{
+        width: 990,
+        height: 425,
+        url: '{{ site.homeurl | append: '/assets/images/pictures/mountain/mountain_1.jpg' }}'
+    }, {
+        width: 990,
+        height: 425,
+        url: '{{ site.homeurl | append: '/assets/images/pictures/mountain/mountain_2.jpg' }}'
+    }, {
+        width: 990,
+        height: 425,
+        url: '{{ site.homeurl | append: '/assets/images/pictures/mountain/mountain_3.jpg' }}'
+    }]
+});
+gallery.show();
+</script>
