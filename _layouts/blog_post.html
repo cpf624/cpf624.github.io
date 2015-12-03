@@ -61,20 +61,11 @@ layout: compress
                         {% endif %}
                     </ul>
                 </div>
-                <div class="post-comment">
-                    <script type="text/javascript">
-                    (function(){
-                        var url = "http://widget.weibo.com/distribution/comments.php?width=0&url={{ site.homeurl | append: page.url }}&fontsize=12&skin=10&appkey=2657881132&iframskin=10&dpc=1";
-                        document.write('<iframe id="WBCommentFrame" src="' + url + '" scrolling="no" frameborder="0" style="width:100%"></iframe>');
-                    })();
-                    </script>
-                    <script src="http://tjs.sjs.sinajs.cn/open/widget/js/widget/comment.js" type="text/javascript" charset="utf-8"></script>
-                    <script type="text/javascript">
-                        window.WBComment.init({
-                                "id": "WBCommentFrame"
-                        });
-                    </script>
-                </div>
+                {% if page.allow_comment != false %}
+                    <div class="post-comment">
+                        {% include weibo_comment.html %}
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>
