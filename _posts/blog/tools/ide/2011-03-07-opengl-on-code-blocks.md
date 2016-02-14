@@ -4,8 +4,7 @@ category: 编程工具
 tags: [Linux, Ubuntu, OpenGL]
 ---
 
-1. 安装Code::Blocks
--------------------
+#### 1. 安装Code::Blocks
 
 * 一个安装教程：<http://forum.ubuntu.org.cn/viewtopic.php?t=59230>
 * 本人是先到 <http://www.codeblocks.org/downloads/26> 下载下来解压后发现里面有很多`.deb`文件，不管，直接运行
@@ -24,8 +23,7 @@ sudo apt-get -f install
 * 根据提示操作，安装需要的库，以及建立关联后，Code::Blocks即可使用了。
 
 
-2. 安装OpenGL库
----------------
+#### 2. 安装OpenGL库
 
 ```bash
 sudo apt-get install freeglut3 freeglut3-dev
@@ -50,8 +48,7 @@ sudo apt-get install libxxf86vm-dev
 
 * 这下编译顺利通过。
 
-3. 其它
--------
+#### 3. 其它
 
 由于实现没有做记录，配置成功后再写的这篇日志，所以可能有些细节之处忘了，容易导致缺失默写库，不过没关系，把那一大堆库都装一下，反正都不大。
 

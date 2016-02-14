@@ -8,40 +8,40 @@ tags: [JavaScript, jQuery, Ajax]
 
 + Request URL:
 
-    ```
-    http://hq.sinajs.cn/rn=1454399448305&list=sz300369
-    ```
+```
+http://hq.sinajs.cn/rn=1454399448305&list=sz300369
+```
 
 + Request Headers:
 
-    ```
-    GET /rn=1454399448305&list=sz300369 HTTP/1.1
-    Host: hq.sinajs.cn
-    Connection: keep-alive
-    Cache-Control: max-age=0
-    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-    Upgrade-Insecure-Requests: 1
-    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36
-    Accept-Encoding: gzip, deflate, sdch
-    Accept-Language: en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4
-    ```
+```
+GET /rn=1454399448305&list=sz300369 HTTP/1.1
+Host: hq.sinajs.cn
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4
+```
 
 + Response Headers:
 
-    ```
-    HTTP/1.1 200 OK
-    Cache-Control: no-cache
-    Content-Length: 146
-    Connection: Keep-Alive
-    Content-Type: application/x-javascript; charset=GBK
-    Content-Encoding: gzip
-    ```
+```
+HTTP/1.1 200 OK
+Cache-Control: no-cache
+Content-Length: 146
+Connection: Keep-Alive
+Content-Type: application/x-javascript; charset=GBK
+Content-Encoding: gzip
+```
 
 + Response Body:
 
-    ```
-    var hq_str_sz300369="绿盟科技,32.500,31.950,35.150,35.150,32.120,35.150,0.000,5239999,179070472.050,3742815,35.150,300,35.140,500,35.080,200,35.010,500,35.000,0,0.000,0,0.000,0,0.000,0,0.000,0,0.000,2016-02-02,10:49:13,00";
-    ```
+```javascript
+var hq_str_sz300369="绿盟科技,32.500,31.950,35.150,35.150,32.120,35.150,0.000,5239999,179070472.050,3742815,35.150,300,35.140,500,35.080,200,35.010,500,35.000,0,0.000,0,0.000,0,0.000,0,0.000,0,0.000,2016-02-02,10:49:13,00";
+```
 
 
 我是需要使用`Ajax`请求来获取实时交易数据，很自然的写出了如下代码：
@@ -66,28 +66,28 @@ XMLHttpRequest cannot load http://hq.sinajs.cn/rn=1454399448305&list=sz300369. N
 
 + Request Headers:
 
-    ```
-    GET /rn=1454399448305&list=sz300369 HTTP/1.1
-    Host: hq.sinajs.cn
-    Connection: keep-alive
-    Accept: */*
-    Origin: http://localhost
-    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36
-    Referer: http://localhost/stock/index.html
-    Accept-Encoding: gzip, deflate, sdch
-    Accept-Language: en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4
-    ```
+```
+GET /rn=1454399448305&list=sz300369 HTTP/1.1
+Host: hq.sinajs.cn
+Connection: keep-alive
+Accept: */*
+Origin: http://localhost
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36
+Referer: http://localhost/stock/index.html
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4
+```
 
 + Response Headers:
 
-    ```
-    HTTP/1.1 200 OK
-    Cache-Control: no-cache
-    Content-Length: 150
-    Connection: Keep-Alive
-    Content-Type: application/x-javascript; charset=GBK
-    Content-Encoding: gzip
-    ```
+```
+HTTP/1.1 200 OK
+Cache-Control: no-cache
+Content-Length: 150
+Connection: Keep-Alive
+Content-Type: application/x-javascript; charset=GBK
+Content-Encoding: gzip
+```
 
 与直接请求相比(不通过Ajax)请求头多了个 `Origin: http://localhost` ，也正是因为这个 `Origin` 触发了浏览器的 `同源策略` ，从而导致Ajax请求无法正常访问。同源策略参考: <https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy>。
 

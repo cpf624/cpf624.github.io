@@ -6,16 +6,16 @@ tags: [有感而发]
 
 Please no longer think only about yourself
 
-    You should think more about others.
+You should think more about others.
 
 Please no longer think only by yourself
 
-    You should communicate with others.
+You should communicate with others.
 
 Please no longer turn round their own
 
-    You should open you mind to the world.
+You should open you mind to the world.
 
 Please just have try
 
-    You will be a perfect person.
+You will be a perfect person.
