@@ -47,14 +47,14 @@ layout: compress
                             <li class="previous">
                                 <a href="{{ site.homeurl | append: page.next.url }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">
                                     <i class="fa fa-chevron-left"></i>
-                                    {{ page.next.title }}
+                                    {{ page.next.title | truncate: 50 }}
                                 </a>
                             </li>
                         {% endif %}
                         {% if page.previous %}
                             <li class="next">
                                 <a href="{{ site.homeurl | append: page.previous.url }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">
-                                    {{ page.previous.title }}
+                                    {{ page.previous.title | truncate: 50 }}
                                     <i class="fa fa-chevron-right"></i>
                                 </a>
                             </li>

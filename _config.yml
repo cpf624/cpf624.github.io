@@ -4,6 +4,8 @@ highlighter: pygments
 timezone: Asia/Shanghai
 encoding: UTF-8
 
+gems: [jekyll-paginate]
+
 compress_html:
     clippings: all
     comments: ["<!-- ", " -->"]
