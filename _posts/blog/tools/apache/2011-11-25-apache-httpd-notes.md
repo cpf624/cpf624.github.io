@@ -24,7 +24,7 @@ a2enmod rewrite
     
 在VirtualHost中加入： 
 
-```apache
+```
 # 匹配所有非https协议的访问
 RewriteEngine On 
 RewriteCond %{SERVER_PROTOCOL} !^https$ 
@@ -53,7 +53,7 @@ openssl x509 -req -days 365 -in server .csr -signkey server .key -out server .cr
 
 - 在default-ssl中加入如下配置： 
 
-```apache
+```
 SSLEngine on 
 SSLCertificateFile    /etc/apache2/ssl/server.crt 
 SSLCertificateKeyFile /etc/apache2/ssl/ server .key
@@ -70,6 +70,6 @@ echo PASSWORD
 
 在`/etc/apache2/httpd.conf`中加入如下配置即可
     
-```apache
+```
 SSLPassPhraseDialog exec:$PATH/pass
 ```
