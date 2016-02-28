@@ -34,11 +34,11 @@ tags: [Java, Maven]
 
 ```bash
 mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file  -Dfile=path-to-your-artifact-jar \
-                                                                              -DgroupId=your.groupId \
-                                                                              -DartifactId=your-artifactId \
-                                                                              -Dversion=version \
-                                                                              -Dpackaging=jar \
-                                                                              -DlocalRepositoryPath=path-to-specific-local-repo
+                                                                      -DgroupId=your.groupId \
+                                                                      -DartifactId=your-artifactId \
+                                                                      -Dversion=version \
+                                                                      -Dpackaging=jar \
+                                                                      -DlocalRepositoryPath=path-to-specific-local-repo
 ```
 
 这样有一点不好的是可能会忘记，或者存入错误的路径，尤其是团队协作的时候。更好的解决方法是将其配置在pom.xml里面，使用maven-install-plugin自动处理：
