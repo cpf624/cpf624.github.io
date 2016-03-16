@@ -5,17 +5,17 @@ tags: [消息队列, MQ, ActiveMQ]
 ---
 
 # 1. 基本原理
-![ActiveMQ Basic Principle]({{ site.homeurl }}/assets/images/blog/tools/mq/activemq-client-principle/activemq_basic_principle.svg)
+![ActiveMQ Basic Principle]({{ site.assetsurl }}/assets/images/blog/tools/mq/activemq-client-principle/activemq_basic_principle.svg)
 
 ActiveMQ基本原理如上图所示，消息由Producer产生，Consumer消费。Producer和Consumer均属于ActiveMQ Client部分，不过一般运行在不同的机器上。Producer产生消息后通过网络发送给ActiveMQ Broker，Broker收到消息后进行存储，再投递给Consumer进行消费(Consumer也是通过网络与Broker连接)。
 
 
-![JMS Architecture]({{ site.homeurl }}/assets/images/blog/tools/mq/activemq-client-principle/jms_architecture.svg)
+![JMS Architecture]({{ site.assetsurl }}/assets/images/blog/tools/mq/activemq-client-principle/jms_architecture.svg)
 
 ActiveMQ完整实现了JMS API，JMS架构如上图所示。无论是生产者(Producer)还是消费者(Consumer)，都需要用Connection Factory创建Connection，再在Connection上创建Session，最后由Session创建出Producer/Consumer实例。Producer要发送消息，首先需要通过对应的Session创建消息，再将创建出来的消息发送到指定的队列。同理，Consumer都是从Session接收消息进行消费。
 
 # 2. 网络结构
-![ActiveMQ Client Network Model]({{ site.homeurl }}/assets/images/blog/tools/mq/activemq-client-principle/activemq_client_network.svg)
+![ActiveMQ Client Network Model]({{ site.assetsurl }}/assets/images/blog/tools/mq/activemq-client-principle/activemq_client_network.svg)
 
 ActiveMQ所实现的Connection是由一个责任链模式的Transport完成的，参考: <http://activemq.apache.org/configuring-transports.html>。概括来说分为网络类Transport和包装类Transport。
 
@@ -27,7 +27,7 @@ ActiveMQ所实现的Connection是由一个责任链模式的Transport完成的�
 
 # 3. 线程模型
 从生产者(Producer)的角度来看ActiveMQ Client的线程模型相对简单，此处不做描述，从消费者(Consumer)角度来看ActiveMQ Client的线程模型如下图所示。
-![ActiveMQ Client Thread Model]({{ site.homeurl }}/assets/images/blog/tools/mq/activemq-client-principle/activemq_client_thread_model.svg)
+![ActiveMQ Client Thread Model]({{ site.assetsurl }}/assets/images/blog/tools/mq/activemq-client-principle/activemq_client_thread_model.svg)
 
 # 4. 长连接维护
 ActiveMQ Consumer Client与ActiveMQ Broker之间的连接为长连接，长连接的维护主要靠三个Daemon线程来完成。

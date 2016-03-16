@@ -1,4 +1,5 @@
 homeurl: "http://jhat.pw"
+assetsurl: "http://jhat.pw"
 timezone: Asia/Shanghai
 encoding: UTF-8
 markdown: kramdown
