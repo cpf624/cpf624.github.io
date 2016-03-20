@@ -75,6 +75,10 @@ img::-moz-selection {
     font-size: 12px;
     font-weight: 800;
 }
+#page-nav .navbar-header {
+    margin-left: 15px;
+    margin-right: 15px;
+}
 #page-nav .navbar-nav li a {
     padding: 10px 0px 10px 10px;
     color: rgba(255, 255, 255, 0.8);
@@ -88,7 +92,7 @@ img::-moz-selection {
     color: white;
 }
 #page-nav .navbar-nav {
-    margin: 0;
+    margin: 0px 25px 0px 0px;
 }
 #page-nav .navbar-nav li a:hover,
 #page-nav .navbar-nav li a:focus {
@@ -146,19 +150,22 @@ img::-moz-selection {
 @media (min-width: 768px) {
     #page-header .container {
         width: 750px;
-        margin-left: -375px;
+    }
+    #page-nav .navbar-header {
+        margin-left: 35px;
     }
 }
 @media (min-width: 992px) {
     #page-header .container {
         width: 970px;
-        margin-left: -485px;
     }
 }
 @media (min-width: 1200px) {
     #page-header .container {
         width: 1170px;
-        margin-left: -32em;
+    }
+    #page-nav .navbar-header {
+        margin-left: 35px;
     }
 }
 
