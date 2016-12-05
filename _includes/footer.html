@@ -43,22 +43,26 @@
         </div>
     </div>
 
-    <div href="#page-header" class="cd-top"><i class="fa fa-arrow-circle-o-up"></i></div>
+    {% if page.cd_top != false %}
+        <div href="#page-header" class="cd-top"><i class="fa fa-arrow-circle-o-up"></i></div>
+    {% endif %}
 </footer>
 
 <script type="text/javascript" src="{{ site.assetsurl }}/assets/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-    $(document).scroll(function(){
-        if ($(document).scrollTop() > 100) {
-            $('.cd-top').show();
-        } else {
-            $('.cd-top').hide();
-        }
+{% if page.cd_top != false %}
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $(document).scroll(function(){
+            if ($(document).scrollTop() > 100) {
+                $('.cd-top').show();
+            } else {
+                $('.cd-top').hide();
+            }
+        });
+        $('.cd-top').click(function(){
+            $('html, body').stop().animate({ scrollTop: 0 }, '600', 'swing');
+        });
     });
-    $('.cd-top').click(function(){
-        $('html, body').stop().animate({ scrollTop: 0 }, '600', 'swing');
-    });
-});
-</script>
+    </script>
+{% endif %}
 <script src="//v1.cnzz.com/stat.php?id={{ site.accounts.cnzz }}&web_id={{ site.accounts.cnzz }}" language="JavaScript"></script>
