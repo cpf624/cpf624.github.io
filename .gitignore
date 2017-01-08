@@ -1,22 +1,12 @@
 # MAC OS
 .DS_Store
 
-# Python
-*.pyc
-__pycache__
-
-# Java
-*.class
-
 # VIM
 .*.swp
 
-# Eclipse
-.classpath
-.project
-.settings
-.pydevproject
-*.prefs
+# Python
+*.pyc
+__pycache__
 
 _site
 bin/.account

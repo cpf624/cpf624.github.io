@@ -21,7 +21,7 @@ exclude: ['bin']
 defaults:
 -
     scope:
-        path: "blog"
+        path: ""
     values:
         layout: "blog_post"
 
