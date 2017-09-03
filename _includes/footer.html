@@ -66,3 +66,6 @@
     </script>
 {% endif %}
 <script src="//v1.cnzz.com/stat.php?id={{ site.accounts.cnzz }}&web_id={{ site.accounts.cnzz }}" language="JavaScript"></script>
+{% if page.use_math %}
+    {% include mathjax.html %}
+{% endif %}
