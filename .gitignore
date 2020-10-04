@@ -10,3 +10,6 @@ __pycache__
 
 _site
 bin/.account
+
+.jekyll-cache
+.jekyll-metadata

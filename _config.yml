@@ -1,3 +1,5 @@
+baseurl: ""
+url: "http://jhat.pw"
 homeurl: "http://jhat.pw"
 assetsurl: "http://jhat.pw"
 timezone: Asia/Shanghai
@@ -7,6 +9,7 @@ kramdown:
     input: GFM
     syntax_highlighter: rouge
 gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 
 compress_html:
     clippings: all
@@ -27,6 +30,7 @@ defaults:
 
 permalink: /blog/:year/:month/:day/:title.html
 paginate: 5
+paginate_path: "page:num"
 excerpt_separator: "\n\n\n"
 author: "Jhat"
 title: "Jhat's Blog"
@@ -40,3 +44,14 @@ accounts:
     weibo: "jhat"
     github: "cpf624"
     cnzz: "5898421"
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - .jekyll-metadata
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - graph.graffle
