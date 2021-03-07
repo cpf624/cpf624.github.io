@@ -8,6 +8,7 @@ Bob最近找了一份搬砖的工作，每次会搬数量不等的砖，一天�
 
 
 ### 建表
+
 ```sql
 CREATE TABLE t_move_brick (
   id            BIGINT NOT NULL AUTO_INCREMENT COMMENT '主键ID',
@@ -41,9 +42,11 @@ CREATE TABLE t_move_pay (
 
 ### 搬砖记录
 Bob每完成一次搬砖，系统就记录一下当次搬砖结果。
+
 ```sql
 insert into t_move_brick (move_no, worker_id, move_num, status) values ('M202012131013000102101', 101, 81, 1);
 ```
+
 最后形成如下流水:
 
 | 主键ID | 搬砖流水号 | 支付流水号 | 搬砖人ID | 搬砖数量 | 状态 | 创建时间 | 更新时间 |
@@ -70,6 +73,7 @@ Bob们工作非常勤劳，因此搬砖记录会非常多，如果直接基于�
 聚合的过程，会用到搬砖记录的两个状态，从 `新建` 状态转移到 `待支付` 状态，状态变更成功后再将其聚合到支付记录上，只要能够保证有且仅有一个线程能变更状态成功，那么就可以保证一条搬砖记录有且仅能被聚合一次。
 
 * 查询时加悲观锁，然后再变更状态
+
 ```java
 public MoveBrick getById(Long id) {
     // select * from t_move_brick where id=1 for update
@@ -97,6 +101,7 @@ public boolean doAggregation(MoveBrick brick) {
 这么做也不是不可以，但是重依赖数据库悲观锁，如果一开始并不知道需要聚合那些搬砖记录，那么可能需要一次性锁住很多搬砖记录，或者先查出来一批搬砖记录，确认可以聚合之后，再单条加悲观锁查询一次。无论哪种方式，其并发性都不会太好。
 
 更好的方式是利用状态机做乐观锁的方式：
+
 ```java
 public boolean doAggregation(MoveBrick brick) {
     // start transaction
@@ -118,6 +123,7 @@ public boolean doAggregation(MoveBrick brick) {
 
 ##### 如何累计搬砖数量
 经常看到如下的实现方式：
+
 ```java
 public boolean doAggregation(MoveBrick brick) {
     // start transaction
@@ -145,6 +151,7 @@ public boolean doAggregation(MoveBrick brick) {
 ```
 
 ### 简单实现
+
 ```java
 private List<MoveBrick> query() {
     // 按一定条件查询出一批搬砖记录
