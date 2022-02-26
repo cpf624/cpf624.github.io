@@ -53,7 +53,7 @@ $$
 # -*- coding: UTF-8 -*- 
 # Author:   Jhat
 # Date:     2017-09-03
-# Home:     http://jhat.pw
+# Home:     http://jhat.org
 # Vim:      tabstop=4 shiftwidth=4 softtabstop=4
 
 from random import randint

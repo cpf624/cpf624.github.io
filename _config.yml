@@ -1,7 +1,7 @@
 baseurl: ""
-url: "http://jhat.pw"
-homeurl: "http://jhat.pw"
-assetsurl: "http://jhat.pw"
+url: "http://jhat.org"
+homeurl: "http://jhat.org"
+assetsurl: "http://jhat.org"
 timezone: Asia/Shanghai
 encoding: UTF-8
 markdown: kramdown
@@ -34,7 +34,7 @@ paginate_path: "page:num"
 excerpt_separator: "\n\n\n"
 author: "Jhat"
 title: "Jhat's Blog"
-description: "jhat.pw Jhat"
+description: "jhat.org Jhat"
 header_img: "/assets/images/home-bg.jpg"
 
 nav_pages: ['pictures', 'about']

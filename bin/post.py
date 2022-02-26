@@ -3,7 +3,7 @@
 # Author:   Jhat
 # Date:     2015-10-27
 # Email:    cpf624@126.com
-# Home:     http://jhat.pw
+# Home:     http://jhat.org
 # Vim:      tabstop=4 shiftwidth=4 softtabstop=4
 # Describe:
 
