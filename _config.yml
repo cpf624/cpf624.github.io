@@ -1,7 +1,7 @@
 baseurl: ""
-url: "http://jhat.org"
-homeurl: "http://jhat.org"
-assetsurl: "http://jhat.org"
+url: "https://jhat.org"
+homeurl: "https://jhat.org"
+assetsurl: "https://jhat.org"
 timezone: Asia/Shanghai
 encoding: UTF-8
 markdown: kramdown
